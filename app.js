@@ -41,6 +41,9 @@ app.use(expressJWT({
 //导入并使用用户路由模块
 const userRouter = require('./router/user')
 app.use('/api', userRouter)
+//导入并使用用户信息的路由模块
+const userinfoRouter = require('./router/userinfo')
+app.use('/my', userinfoRouter)
 
 // 定义错误级别的中间件
 app.use((err, req, res, next) => {
