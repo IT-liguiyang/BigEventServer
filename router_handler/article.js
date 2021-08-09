@@ -7,7 +7,6 @@ exports.addArticle = (req, res) => {
   console.log(req.file)
   if (!req.file || req.file.fieldname !== 'cover_img') return res.cc('文章封面是必选参数！')
 
-  // TODO：证明数据都是合法的，可以进行后续业务逻辑的处理
   // 处理文章的信息对象
   const articleInfo = {
     // 标题、内容、发布状态、所属分类的Id
